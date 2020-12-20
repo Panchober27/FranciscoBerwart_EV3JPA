@@ -35,15 +35,19 @@
                                 </div>
                                 <div class="form-group">
                                     <input id="apePat" type="text" name="txtApePat">
-                                    <label for="apePat">Appelido Paterno Empleado</label>
+                                    <label for="apePat">Apellido Paterno Empleado</label>
                                 </div>
                                 <div class="form-group">
                                     <input id="apeMat" type="text" name="txtApeMat">
-                                    <label for="apeMat">Appelido Materno Empleado</label>
+                                    <label for="apeMat">Apellido Materno Empleado</label>
+                                </div>
+                                <div class="form-group">
+                                    <input id="sueldo" type="number" name="txtSueldo">
+                                    <label for="sueldo">Sueldo Empleado</label>
                                 </div>
                                 <div class="form-group">
                                     <button name="btn" value="1" type="submit" class="btn btn-success">
-                                        Guardar Empleado
+                                        Registrar Empleado
                                     </button>
                                 </div>
                             </form>
