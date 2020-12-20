@@ -18,5 +18,43 @@
         <h2 style="text-align: center">
             Agregar un Empleado.
         </h2>
+        
+        <!--Formulario para agregar un nuevo Empleado.-->
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-sm-4 offset-md-4">
+                    <div class="card animated flipInY">
+                        <div class="card-header bg-dark text-white text-center">
+                            <h3>Agregue un nuevo Empleado</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="agregar.do" method="get">
+                                <div class="form-group">
+                                    <input id="nombre" type="text" name="txtNombre">
+                                    <label for="nombre">Nombres Empleado</label>
+                                </div>
+                                <div class="form-group">
+                                    <input id="apePat" type="text" name="txtApePat">
+                                    <label for="apePat">Appelido Paterno Empleado</label>
+                                </div>
+                                <div class="form-group">
+                                    <input id="apeMat" type="text" name="txtApeMat">
+                                    <label for="apeMat">Appelido Materno Empleado</label>
+                                </div>
+                                <div class="form-group">
+                                    <button name="btn" value="1" type="submit" class="btn btn-success">
+                                        Guardar Empleado
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <c:if test="${not empty msg}">
+                            <p style="color: yellowgreen">${requestScope.msg}</p>
+                        </c:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </body>
 </html>
