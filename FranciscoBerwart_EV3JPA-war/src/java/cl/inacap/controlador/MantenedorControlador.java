@@ -90,8 +90,14 @@ public class MantenedorControlador extends HttpServlet {
             //Se deriba la petición hacia el agregar.jsp
             request.setAttribute("msg", "Registro insertado correctamente!");
             request.getRequestDispatcher("agregar.jsp").forward(request, response);
+        } else if(request.getServletPath().equals("/buscar.do")){
             
+            // Se recibe la peticion de buscar.
+            // Se evaluan los parametros.
+            String nombre = request.getParameter("txtNombre");
+            String apePat = request.getParameter("txtApePat");
             
+            // despachar hacia buscar.jsp
             
         }
         

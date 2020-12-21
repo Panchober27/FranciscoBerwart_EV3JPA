@@ -19,7 +19,7 @@
         <h2>Buscar Empleado.</h2>
 
         <!--Generar un buscador para un empleado en base a un atriuto.-->
-        <p>Colocar un buscador de Empleados en base a un a tributo(por definir...)</p>
+        <p>Colocar un buscador de Empleados en base a un a tributo(por construir...)</p>
 
         <!--Formulario para agregar un nuevo Empleado.-->
         <div class="container p-5">
@@ -27,25 +27,27 @@
                 <div class="col-sm-4 offset-md-4">
                     <div class="card animated flipInY">
                         <div class="card-header bg-dark text-white text-center">
-                            <h3>Busqueda de Empleado</h3>
-                            <p>Por construir....</p>
+                            <h3>Empleado</h3>
                         </div>
                         <div class="card-body">
-                            <form action="buscar.do" method="get">
-                                <div class="form-group">
-                                    <input id="nombre" type="text" name="txtNombre">
-                                    <label for="nombre">Nombres Empleado</label>
-                                </div>
-                                <div class="form-group">
-                                    <input id="apePat" type="text" name="txtApePat">
-                                    <label for="apePat">Apellido Paterno Empleado</label>
-                                </div>
-                                <div class="form-group">
-                                    <button name="btn" value="1" type="submit" class="btn btn-primary">
-                                        Buscar Empleado
-                                    </button>
-                                </div>
-                            </form>
+                            <table>
+                                <tr>
+                                    <th>Codigo Empleado</th>
+                                    <th>Nombre Empleado</th>
+                                    <th>Apellido Paterno Empleado</th>
+                                    <th>Apellido Materno Empleado</th>
+                                    <th>Sueldo Empleado</th>
+                                </tr>
+                                <c:forEach items="${requestScope.lista}" var="e">
+                                    <tr>
+                                        <td>${e.codEmpleado}</td>
+                                        <td>${e.nombre}</td>
+                                        <td>${e.apePat}</td>
+                                        <td>${e.apeMat}</td>
+                                        <td>${e.sueldo}</td>
+                                    </tr>
+                                </c:forEach>
+                            </table>
                         </div>
                         <c:if test="${not empty msg}">
                             <p style="color: red">${requestScope.msg}</p>
