@@ -9,6 +9,7 @@ import cl.inacap.bean.BeanMantenedorLocal;
 import cl.inacap.entity.Mantenedor;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -65,8 +66,11 @@ public class MantenedorControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         if(request.getServletPath().equals("/listar.do")){
-            
-            //Acciones de listar.do
+            //Obtener la lista con los empleados almacenados en la tabla mantenedor.
+            List<Mantenedor> listaEmpleados = beanMantenedor.getEmpleados();
+            //Se envia la lista de empleados al jsp.
+            request.setAttribute("lista", listaEmpleados);
+            request.getRequestDispatcher("listar.jsp").forward(request, response);
             
         } else if(request.getServletPath().equals("/agregar.do")){// Acciones de /agregar.do
             

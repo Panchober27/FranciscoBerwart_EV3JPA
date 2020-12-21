@@ -18,17 +18,34 @@
         <c:import url="partials/nav.jsp"/>
         <h2>Lista Empleados</h2>
         <br/>
-        
+
         <!--Aqui ira la tabla con los empleados del mantenedor.-->
         <p>Aqui ira la tabla con los empleados del mantenedor.</p>
         <hr/>
         <br/>
         <!--Tabla Temporal de demostración-->
-        <table>
-            <tr>Nombre Empleado</tr>
-            <tr>Sueldo Empleado</tr>
-        </table>
-        
-        
+        <div class="tabla">
+            <table>
+                <tr>
+                    <th>Codigo Empleado</th>
+                    <th>Nombre Empleado</th>
+                    <th>Apellido Paterno Empleado</th>
+                    <th>Apellido Materno Empleado</th>
+                    <th>Sueldo Empleado</th>
+                </tr>
+                <c:forEach items="${requestScope.lista}" var="e">
+                    <tr>
+                        <td>${e.codEmpleado}</td>
+                        <td>${e.nombre}</td>
+                        <td>${e.apePat}</td>
+                        <td>${e.apeMat}</td>
+                        <td>${e.sueldo}</td>
+                    </tr>
+                </c:forEach>
+
+            </table>
+        </div>
+
+
     </body>
 </html>

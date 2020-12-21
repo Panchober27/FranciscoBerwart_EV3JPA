@@ -18,3 +18,8 @@ body {
 h2,p{
     text-align: center;
 }
+
+.tabla {
+    display: flex;
+    justify-content: center;
+}

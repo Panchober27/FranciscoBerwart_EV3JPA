@@ -5,6 +5,8 @@
  */
 package cl.inacap.bean;
 
+import cl.inacap.entity.Mantenedor;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -24,6 +26,8 @@ public class BeanMantenedor implements BeanMantenedorLocal {
         em.persist(object);
     }
     
-    
+    public List<Mantenedor> getEmpleados(){
+        return em.createQuery("select e from Mantenedor e").getResultList();
+    }
     
 }

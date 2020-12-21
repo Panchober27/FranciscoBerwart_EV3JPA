@@ -5,6 +5,8 @@
  */
 package cl.inacap.bean;
 
+import cl.inacap.entity.Mantenedor;
+import java.util.List;
 import javax.ejb.Local;
 
 /**
@@ -14,6 +16,7 @@ import javax.ejb.Local;
 @Local
 public interface BeanMantenedorLocal {
     
+    List<Mantenedor> getEmpleados();
     
     void agregar(Object object);
     
