@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  */
 @Stateless
 public class BeanMantenedor implements BeanMantenedorLocal {
-
+    
     @PersistenceContext(unitName = "FranciscoBerwart_EV3JPA-ejbPU")
     private EntityManager em;
     

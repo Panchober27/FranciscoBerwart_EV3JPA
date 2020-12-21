@@ -11,13 +11,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <c:import url="partials/head.jsp" />
+        <link href="public/main.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>
         <c:import url="partials/nav.jsp" />
-        <h2 style="text-align: center">
-            Agregar un Empleado.
-        </h2>
+        <h2>Agregar un Empleado.</h2>
         
         <!--Formulario para agregar un nuevo Empleado.-->
         <div class="container p-5">
